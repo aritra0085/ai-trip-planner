@@ -1,6 +1,6 @@
 import React from 'react'
 
-const provider = () => {
+const Provider = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const provider = () => {
   )
 }
 
-export default provider
+export default Provider
