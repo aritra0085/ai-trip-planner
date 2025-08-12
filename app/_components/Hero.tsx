@@ -1,7 +1,28 @@
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { Send } from 'lucide-react'
+import { Globe2, Landmark, Plane, Send } from 'lucide-react'
 import React from 'react'
+
+
+const suggestions = [
+    {
+      title:'Create New Trip',
+      icon:<Globe2 className='text-green-500 h-5 w-5'/>
+    },
+    {
+      title:'Inspire me where to go',
+      icon:<Plane className='text-red-400 h-5 w-5'/>
+    },
+    {
+      title:'Discover Hidden gems',
+      icon:<Landmark className='text-blue-500 h-5 w-5'/>
+    },
+    {
+      title:'Adventure Destination',
+      icon:<Globe2 className='text-yellow-500 h-5 w-5'/>
+    }
+
+]
 
 const Hero = () => {
   return (
@@ -22,6 +43,15 @@ const Hero = () => {
             </div>
           </div>
       {/* Suggestion list */}
+
+      <div className='flex gap-5'>
+        {suggestions.map((suggestions, index)=>(
+          <div key={index} className='flex items-center gap-2 border rounded-full p-2 cursor-pointer hover:bg-primary hover:text-white'>
+            {suggestions.icon}
+            <h2>{suggestions.title}</h2>
+          </div>
+        ))}
+      </div>
 
       {/* video Section */}
       </div>
