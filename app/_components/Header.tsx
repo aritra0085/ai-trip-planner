@@ -31,7 +31,7 @@ const Header = () => {
           {MenuOptions.map((menu,index)=>(
             <Link href={menu.path}>
             <h2 className='text-lg hover:scale-105 transition-all hover:text-primary'>{menu.name}</h2>
-            </Link>
+             </Link>
           ))}
         </div>
       {/* Get Started Button */}
