@@ -1,7 +1,11 @@
+"use client"
 import HeroVideoDialog from '@/components/magicui/hero-video-dialog'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
+import { useUser } from '@clerk/nextjs'
 import { ArrowDown, Globe2, Landmark, Plane, Send } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+
 import React from 'react'
 
 
@@ -26,6 +30,17 @@ const suggestions = [
 ]
 
 const Hero = () => {
+
+  const {user}=useUser();
+  const router=useRouter();
+  const onSend=()=>{
+    if(!user)
+    {
+      router.push('/sign-in')
+      return;
+    }
+    //Navigate to Create Trip Planner Web Page
+  }
   return (
     <div className='mt-24 w-full flex justify-center'>
       {/* Content */}
@@ -38,7 +53,7 @@ const Hero = () => {
               <Textarea placeholder='Create a trip for Parise from New York'
               className='w-full h-28 bg-transparent border-none focus-visible:ring-0 shadow-none resize-none'
               />
-              <Button size={'icon'} className='absolute bottom-6 right-6'>
+              <Button size={'icon'} className='absolute bottom-6 right-6'onClick={()=>onSend()}>
                 <Send className='h-4 w-4'/>
               </Button>
             </div>
