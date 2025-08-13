@@ -1,6 +1,7 @@
+import HeroVideoDialog from '@/components/magicui/hero-video-dialog'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { Globe2, Landmark, Plane, Send } from 'lucide-react'
+import { ArrowDown, Globe2, Landmark, Plane, Send } from 'lucide-react'
 import React from 'react'
 
 
@@ -28,7 +29,7 @@ const Hero = () => {
   return (
     <div className='mt-24 w-full flex justify-center'>
       {/* Content */}
-      <div className='max-w-3xl w-full text-center space-y-6'>
+      <div className='max-w-3xl w-full text-center space-y-6 '>
         <h1 className='text-xl md:text-5xl font-bold'>Hey, I'm your personal <span className='text-primary'>Trip Planner</span> </h1>
         <p className='text-lg'>Tell me what you want,and I'll handle the rest: Flights, Hotels, trip Planner - all in seconds</p>
       {/* input Box */}
@@ -52,8 +53,18 @@ const Hero = () => {
           </div>
         ))}
       </div>
-
+      <div className='flex items-center justify-center flex-col'>
+        <h2 className='my-2 mt-14 flex gap-2 text-center'>Not sure where to start? <strong>See how it works</strong> <ArrowDown/></h2>
+      
       {/* video Section */}
+      <HeroVideoDialog
+            className="block dark:hidden"
+            animationStyle="from-center"
+            videoSrc="https://www.example.com/dummy-video"
+            thumbnailSrc="https://mma.prnewswire.com/media/2401528/1_MindtripProduct.jpg?p=facebook"
+            thumbnailAlt="Dummy Video Thumbnail"
+          />
+        </div>
       </div>
     </div>
   )
