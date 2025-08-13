@@ -10,8 +10,8 @@ export function PopularCityList() {
 
   return (
     <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-        Get to know your iSad.
+      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-3xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+        Popular Destination to Visit
       </h2>
       <Carousel items={cards} />
     </div>
@@ -69,12 +69,12 @@ const data = [
     src: "https://images.unsplash.com/photo-1522547902298-51566e4fb383?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: <DummyContent />,
   },
-  {
-    category: "Rome, Italy",
-    title: "Walk through History – Colosseum, Vatican, Roman Forum",
-    src: "https://plus.unsplash.com/premium_photo-1675975678457-d7070bf77c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
-  },
+  // {
+  //   category: "Rome, Italy",
+  //   title: "Walk through History – Colosseum, Vatican, Roman Forum",
+  //   src: "https://plus.unsplash.com/premium_photo-1675975678457-d7070bf77c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   content: <DummyContent />,
+  // },
   {
     category: "Dubai, UAE",
     title: "Luxury and Innovation – Burj Khalifa, Desert Safari",
