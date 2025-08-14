@@ -4,5 +4,6 @@ import { v } from "convex/values";
 export default defineSchema({
     UserTable:defineTable({
         name:v.string()
+      //commit  
     })
 })
