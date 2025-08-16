@@ -35,7 +35,7 @@ function Provider({
   return (
     <UserDetailContext.Provider value={{userDetail, setUserDetail}}>
     <div>
-      <Header />
+      {/* <Header /> */}
       {children}
     </div>
     </UserDetailContext.Provider>
