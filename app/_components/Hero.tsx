@@ -40,6 +40,7 @@ const Hero = () => {
       return;
     }
     //Navigate to Create Trip Planner Web Page
+    router.push('/create-new-trip') //redirect to create new trip page
   }
   return (
     <div className='mt-24 w-full flex justify-center'>
