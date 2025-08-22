@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 
 
-const suggestions = [
+ export const suggestions = [
     {
       title:'Create New Trip',
       icon:<Globe2 className='text-green-500 h-5 w-5'/>
@@ -65,7 +65,7 @@ const Hero = () => {
         {suggestions.map((suggestions, index)=>(
           <div key={index} className='flex items-center gap-2 border rounded-full p-2 cursor-pointer hover:bg-primary hover:text-white'>
             {suggestions.icon}
-            <h2>{suggestions.title}</h2>
+            <h2 className='text-sm'>{suggestions.title}</h2>
           </div>
         ))}
       </div>
