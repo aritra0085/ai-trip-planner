@@ -9,7 +9,7 @@ function EmptyBoxState() {
 
       <div className='flex flex-col gap-5'>
               {suggestions.map((suggestions, index)=>(
-                <div key={index} className='flex items-center gap-2 border rounded-xl p-2 cursor-pointer hover:bg-primary hover:text-white'>
+                <div key={index} className='flex items-center gap-2 border rounded-xl p-5 cursor-pointer hover:bg-primary hover:text-white'>
                   {suggestions.icon}
                   <h2 className='text-sm'>{suggestions.title}</h2>
                 </div>
