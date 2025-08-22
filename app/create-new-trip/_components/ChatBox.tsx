@@ -2,7 +2,7 @@
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import axios from 'axios'
-import { Send } from 'lucide-react'
+import { Loader, Send } from 'lucide-react'
 import React, { useState } from 'react'
 
 
@@ -56,6 +56,14 @@ function ChatBox() {
                 </div>
             </div>
           ))} 
+
+          {loading && <div className='flex justify-start mt-2'>
+                <div className='max-w-lg bg-gray-200 text-black px-4 py-2 rounded-lg'>
+                     <Loader className='animate-spin'/>
+                </div>
+            </div>}
+
+
       </section>
          {/* User Input */}
       <section>
