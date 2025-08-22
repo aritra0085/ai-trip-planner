@@ -1,7 +1,7 @@
 import { suggestions } from '@/app/_components/Hero'
 import React from 'react'
 
-function EmptyBoxState() {
+function EmptyBoxState({onSelectOption}:any) {
   return (
     <div className='mt-7'>
       <h2 className='font-bold text-3xl text-center'>Start Planning new <strong className='text-primary'>Trip</strong>  using AI</h2>
@@ -9,9 +9,11 @@ function EmptyBoxState() {
 
       <div className='flex flex-col gap-5'>
               {suggestions.map((suggestions, index)=>(
-                <div key={index} className='flex items-center gap-2 border rounded-xl p-5 cursor-pointer hover:bg-primary hover:text-white'>
+                <div key={index}
+                onClick={()=>onSelectOption(suggestions.title)}
+                className='flex items-center gap-2 border rounded-xl p-3 cursor-pointer hover:border-primary hover:text-primary'>
                   {suggestions.icon}
-                  <h2 className='text-sm'>{suggestions.title}</h2>
+                  <h2 className='text-lg'>{suggestions.title}</h2>
                 </div>
               ))}
             </div>

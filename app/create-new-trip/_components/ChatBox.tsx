@@ -43,7 +43,8 @@ function ChatBox() {
   return (
     <div className='h-[85vh] flex flex-col'>
       {messages?.length == 0 &&
-          <EmptyBoxState/>
+          <EmptyBoxState
+           onSelectOption={(v:string)=>{ setUserInput(v); onSend();}}/>
       }
         {/* Display Messages */}
       <section className='flex-1 overflow-y-auto p-4'>
