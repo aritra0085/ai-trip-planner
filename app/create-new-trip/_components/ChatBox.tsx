@@ -10,6 +10,7 @@ import EmptyBoxState from './EmptyBoxState'
   type Message={
     role:string,
     content:string
+    ui?:string,
   }
 
 function ChatBox() {
@@ -35,11 +36,23 @@ function ChatBox() {
 
         setMessages((prev:Message[])=>[...prev,{
           role:'assistant',
-          content:result?.data?.resp
+          content:result?.data?.resp,
+          ui:result?.data?.ui
         }]);
         console.log(result.data);
         setLoading(false);
     }
+
+    const RenderGenerativeUi=(ui:string)=>{
+        if(ui=='budget')
+        {
+          //Budget UI Component
+        }else if (ui == 'groupSize'){
+          //Group Size UI Component
+        }
+        return null
+    }
+
   return (
     <div className='h-[85vh] flex flex-col'>
       {messages?.length == 0 &&
@@ -58,6 +71,7 @@ function ChatBox() {
             <div className='flex justify-start mt-2'key={index}>
                 <div className='max-w-lg bg-gray-200 text-black px-4 py-2 rounded-lg'>
                     {msg.content}
+                    {RenderGenerativeUi(msg.ui??'')}
                 </div>
             </div>
           ))} 
