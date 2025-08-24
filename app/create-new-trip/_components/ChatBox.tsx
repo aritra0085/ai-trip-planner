@@ -6,6 +6,7 @@ import { Loader, Send } from 'lucide-react'
 import React, { useState } from 'react'
 import EmptyBoxState from './EmptyBoxState'
 import GroupSizeUi from './GroupSizeUi'
+import BudgetUi from './BudgetUi'
 
 
   type Message={
@@ -48,6 +49,7 @@ function ChatBox() {
         if(ui=='budget')
         {
           //Budget UI Component
+          return <BudgetUi onSelectedOption={(v:string)=>{setUserInput(v);onSend()}}/>
         }else if (ui == 'groupSize'){
           //Group Size UI Component
           return <GroupSizeUi onSelectedOption={(v:string)=>{setUserInput(v);onSend()}}/>
