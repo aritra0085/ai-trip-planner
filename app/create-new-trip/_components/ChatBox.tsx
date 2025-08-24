@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Loader, Send } from 'lucide-react'
 import React, { useState } from 'react'
 import EmptyBoxState from './EmptyBoxState'
+import GroupSizeUi from './GroupSizeUi'
 
 
   type Message={
@@ -49,6 +50,7 @@ function ChatBox() {
           //Budget UI Component
         }else if (ui == 'groupSize'){
           //Group Size UI Component
+          return <GroupSizeUi/>
         }
         return null
     }
